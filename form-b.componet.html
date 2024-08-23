@@ -1,0 +1,52 @@
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col-sm-6 mt-5">
+                <div class="form-group">
+                    <label for="FirstName">First Name</label>
+                    <input type="text" class="form-control" id="FirstName">
+                </div>
+            </div>
+            <div class="col-sm-6 mt-5">
+                <div class="form-group">
+                    <label for="LastName">Last Name</label>
+                    <input type="text" class="form-control" id="LastName">
+                </div>
+            </div>
+        </div>
+        <label for="" class="mt-3">How should we contact you?</label>
+
+        <div class="row">
+            <div class="col-sm-6 mt-2">
+            <div class="form-check form-check-inline col-sm-3">
+                <input class="form-check-input" type="radio" name="phone" id="phone" value="phone"
+                    [(ngModel)]="selectVal">
+                <label class="form-check-label" for="phone">
+                    Phone
+                </label>
+            </div>
+            <div class="form-check form-check-inline col-sm-3">
+                <input class="form-check-input" type="radio" name="email" id="email" value="email"
+                    [(ngModel)]="selectVal">
+                <label class="form-check-label" for="email">
+                    Email
+                </label>
+            </div>
+        </div>
+            <div class="col-sm-6">
+            <div class="col-sm-12 p-0" *ngIf="selectVal === 'phone'">
+                <div class="form-group ">
+                    <label for="PhoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="PhoneNumber" value="PhoneNumber">
+                </div>
+            </div>
+            <div class="col-sm-12 p-0" *ngIf="selectVal === 'email'">
+                <div class="form-group ">
+                    <label for="Email">Email Address</label>
+                    <input type="text" class="form-control" id="Email" value="email">
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+</div>
